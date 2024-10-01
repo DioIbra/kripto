@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Videograph Template" />
+    <meta name="keywords" content="Videograph, unica, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kriptografi by Pemuda Hijrah</title>
+    <link rel="icon" href="img/logopemhi.png" type="image/x-icon" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+      /* Dropdown container */
+      .header__nav__menu ul.dropdown {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        list-style: none;
+        padding: 10px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px); /* Efek turun */
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        z-index: 99;
+      }
+
+      /* Dropdown items */
+      .header__nav__menu ul.dropdown li {
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Link inside the dropdown */
+      .header__nav__menu ul.dropdown li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+      }
+
+      /* Show dropdown when hover */
+      .header__nav__menu li:hover > ul.dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      /* Hover effect for dropdown items */
+      .header__nav__menu ul.dropdown li:hover {
+        background-color: #c5c5c5;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Menambahkan efek hover teks berubah menjadi hijau */
+      .header__nav__menu ul.dropdown li a:hover {
+        color: rgb(214, 3, 179); /* Teks berubah menjadi hijau saat hover */
+      }
+
+      /* Menambahkan transisi yang lebih halus ke item */
+      .header__nav__menu li {
+        position: relative; /* Dibutuhkan untuk posisi dropdown */
+      }
+
+      /* Untuk item navigasi tanpa dropdown */
+      .header__nav__menu li a {
+        padding: 10px 20px;
+        display: inline-block;
+        color: white;
+        transition: color 0.3s ease;
+      }
+
+      /* Warna teks berubah menjadi hijau saat hover pada menu utama */
+      .header__nav__menu li a:hover {
+        color: rgb(189, 2, 127); /* Teks berubah menjadi hijau saat hover */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="header__logo">
+              <a href="./index.html"><img src="img/pemhi.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-10">
+            <div class="header__nav__option">
+              <nav class="header__nav__menu mobile-menu">
+                <ul>
+                  <li><a href="./index.html">Home</a></li>
+                  <li>
+                    <a href="#">Classic</a>
+                    <ul class="dropdown">
+                      <li><a href="./caesarcipher.html">Caesar Cipher</a></li>
+                      <li>
+                        <a href="./vigenerecipher.html">Vigenère Cipher</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="active">
+                    <a href="#">Modern</a>
+                    <ul class="dropdown">
+                      <li><a href="./xor.html">XOR</a></li>
+                      <li><a href="./rsa.html">RSA</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="./superenkripsi.html">Super Enkripsi</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <div
+      class="breadcrumb-option spad set-bg"
+      data-setbg="img/breadcrumb-bg.jpg"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="breadcrumb__text">
+              <h2>XOR</h2>
+              <div class="breadcrumb__links">
+                <a href="#">Home</a>
+                <span>About</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- XOR Section Begin -->
+    <section class="about spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>XOR Encryption & Decryption</h2>
+              <p>
+                Masukkan teks dan kunci untuk mengenkripsi atau mendekripsi
+                menggunakan XOR.
+              </p>
+            </div>
+
+            <div class="xor__form">
+              <form id="cipherForm">
+                <div class="form-group">
+                  <label for="plaintext" class="text-light"
+                    >Masukkan Teks:</label
+                  >
+                  <textarea
+                    id="plaintext"
+                    class="form-control"
+                    rows="5"
+                    placeholder="Masukkan teks yang akan dienkripsi atau didekripsi"
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="key" class="text-light">Masukkan Kunci:</label>
+                  <input
+                    type="text"
+                    id="key"
+                    class="form-control"
+                    placeholder="Masukkan kata kunci"
+                  />
+                </div>
+
+                <!-- Mengganti <button> dengan <a> -->
+                <a href="#" class="primary-btn my-5 mr-5" id="encrypt-link"
+                  >Enkripsi</a
+                >
+                <a href="#" class="primary-btn my-5" id="decrypt-link"
+                  >Dekripsi</a
+                >
+              </form>
+            </div>
+
+            <div class="xor__result">
+              <h4 class="text-light">Hasil:</h4>
+              <textarea
+                id="result"
+                class="form-control"
+                rows="5"
+                readonly
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- XOR Section End -->
+
+    <!-- About XOR Encryption Section Begin -->
+    <section class="team spad set-bg" data-setbg="img/team-bg.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title team__title">
+              <span>About</span>
+              <h2>XOR ENCRYPTION & DECRYPTION</h2>
+              <p></p>
+              <p>
+                XOR Encryption adalah teknik enkripsi yang menggunakan operasi
+                logika XOR (Exclusive OR) untuk mengenkripsi dan mendekripsi
+                pesan. XOR adalah operasi biner yang bekerja pada dua bit, di
+                mana hasilnya adalah 1 jika salah satu dari kedua bit tersebut
+                bernilai 1, namun bukan keduanya.
+              </p>
+              <p>
+                Cara kerja XOR Encryption sangat sederhana. Untuk mengenkripsi
+                pesan, setiap bit dari teks asli (plaintext) dioperasikan dengan
+                bit dari kunci menggunakan operasi XOR. Kunci yang digunakan
+                bisa berupa satu karakter atau serangkaian karakter yang diulang
+                sesuai panjang teks. Proses ini menghasilkan teks terenkripsi
+                (ciphertext). Dekripsi dilakukan dengan cara yang sama, yaitu
+                dengan menerapkan operasi XOR antara ciphertext dan kunci yang
+                sama. Ini memungkinkan proses dekripsi menjadi identik dengan
+                proses enkripsi.
+              </p>
+              <p>
+                Sebagai contoh, jika kita memiliki teks asli "A" (ASCII 65 atau
+                biner 01000001) dan kunci "K" (ASCII 75 atau biner 01001011),
+                kita akan melakukan XOR antara kedua nilai biner tersebut untuk
+                menghasilkan ciphertext:
+              </p>
+              <pre>01000001 (A) XOR 01001011 (K) = 00001010 (Ciphertext)</pre>
+              <p>Untuk mendekripsi, XOR kembali ciphertext dengan kunci:</p>
+              <pre>00001010 (Ciphertext) XOR 01001011 (K) = 01000001 (A)</pre>
+              <p>
+                Meskipun XOR Encryption sangat cepat dan mudah
+                diimplementasikan, teknik ini memiliki kelemahan jika kunci yang
+                digunakan terlalu pendek atau dapat ditebak. Kunci yang berulang
+                atau pendek akan membuat pola dalam ciphertext yang dapat
+                dianalisis dan dipecahkan. Oleh karena itu, XOR Encryption
+                sering digunakan dalam kombinasi dengan metode enkripsi lainnya
+                atau dengan kunci yang cukup panjang untuk meningkatkan
+                keamanan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About XOR Encryption Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const plaintext = document.getElementById("plaintext");
+        const key = document.getElementById("key");
+        const result = document.getElementById("result");
+
+        // Fungsi XOR Enkripsi dan Dekripsi
+        function xorEncryptDecrypt(text, key) {
+          let output = "";
+          for (let i = 0; i < text.length; i++) {
+            output += String.fromCharCode(
+              text.charCodeAt(i) ^ key.charCodeAt(i % key.length)
+            );
+          }
+          return output;
+        }
+
+        // Enkripsi menggunakan <a>
+        document
+          .getElementById("encrypt-link")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah link untuk reload halaman
+            const text = plaintext.value;
+
+            // Update regex to allow letters, spaces, and symbols in plaintext
+            if (!/^[a-zA-Z\s]*$/.test(text)) {
+              alert("Error: Masukkan hanya huruf dan spasi!");
+              return;
+            }
+
+            const encryptionKey = key.value;
+
+            // Ensure the key contains only letters
+            if (!/^[a-zA-Z]+$/.test(encryptionKey)) {
+              alert("Error: Kunci hanya boleh terdiri dari huruf!");
+              return;
+            }
+
+            const encryptedText = xorEncryptDecrypt(text, encryptionKey);
+            result.value = btoa(encryptedText); // Base64 encode untuk output yang lebih bersih
+          });
+
+        // Dekripsi menggunakan <a>
+        document
+          .getElementById("decrypt-link")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah link untuk reload halaman
+            const text = atob(plaintext.value); // Decode dari Base64
+            const decryptionKey = key.value;
+
+            // Ensure the key contains only letters
+            if (!/^[a-zA-Z]+$/.test(decryptionKey)) {
+              alert("Error: Kunci hanya boleh terdiri dari huruf!");
+              return;
+            }
+
+            const decryptedText = xorEncryptDecrypt(text, decryptionKey);
+            result.value = decryptedText;
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Videograph Template" />
+    <meta name="keywords" content="Videograph, unica, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kriptografi by Pemuda Hijrah</title>
+    <link rel="icon" href="img/logopemhi.png" type="image/x-icon" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+      /* Dropdown container */
+      .header__nav__menu ul.dropdown {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        list-style: none;
+        padding: 10px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px); /* Efek turun */
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        z-index: 99;
+      }
+
+      /* Dropdown items */
+      .header__nav__menu ul.dropdown li {
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Link inside the dropdown */
+      .header__nav__menu ul.dropdown li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+      }
+
+      /* Show dropdown when hover */
+      .header__nav__menu li:hover > ul.dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      /* Hover effect for dropdown items */
+      .header__nav__menu ul.dropdown li:hover {
+        background-color: #c5c5c5;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Menambahkan efek hover teks berubah menjadi hijau */
+      .header__nav__menu ul.dropdown li a:hover {
+        color: rgb(214, 3, 179); /* Teks berubah menjadi hijau saat hover */
+      }
+
+      /* Menambahkan transisi yang lebih halus ke item */
+      .header__nav__menu li {
+        position: relative; /* Dibutuhkan untuk posisi dropdown */
+      }
+
+      /* Untuk item navigasi tanpa dropdown */
+      .header__nav__menu li a {
+        padding: 10px 20px;
+        display: inline-block;
+        color: white;
+        transition: color 0.3s ease;
+      }
+
+      /* Warna teks berubah menjadi hijau saat hover pada menu utama */
+      .header__nav__menu li a:hover {
+        color: rgb(189, 2, 127); /* Teks berubah menjadi hijau saat hover */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="header__logo">
+              <a href="./index.html"><img src="img/pemhi.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-10">
+            <div class="header__nav__option">
+              <nav class="header__nav__menu mobile-menu">
+                <ul>
+                  <li><a href="./index.html">Home</a></li>
+                  <li>
+                    <a href="#">Classic</a>
+                    <ul class="dropdown">
+                      <li><a href="./caesarcipher.html">Caesar Cipher</a></li>
+                      <li>
+                        <a href="./vigenerecipher.html">Vigenère Cipher</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="#">Modern</a>
+                    <ul class="dropdown">
+                      <li><a href="./xor.html">XOR</a></li>
+                      <li><a href="./rsa.html">RSA</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="active">
+                    <a href="./superenkripsi.html">Super Enkripsi</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <div
+      class="breadcrumb-option spad set-bg"
+      data-setbg="img/breadcrumb-bg.jpg"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="breadcrumb__text">
+              <h2>Super Enkripsi</h2>
+              <div class="breadcrumb__links">
+                <a href="#">Home</a>
+                <span href="#">About</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Super Encryption Section Begin -->
+    <section class="about spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>Super Encryption</h2>
+              <p>
+                Masukkan teks dan kunci untuk mengenkripsi atau mendekripsi.
+              </p>
+            </div>
+
+            <div class="rsa__form">
+              <textarea
+                id="plaintext"
+                class="form-control"
+                rows="5"
+                placeholder="Masukkan teks di sini..."
+              ></textarea
+              ><br />
+              <input
+                type="number"
+                id="caesarShift"
+                class="form-control"
+                placeholder="Kunci Caesar Cipher"
+              /><br />
+              <input
+                type="text"
+                id="vigenereKey"
+                class="form-control"
+                placeholder="Kunci Vigenere Cipher"
+              /><br />
+              <input
+                type="text"
+                id="xorKey"
+                class="form-control"
+                placeholder="Kunci XOR"
+              /><br />
+              <input
+                type="number"
+                id="pValue"
+                class="form-control"
+                placeholder="Nilai P RSA (bilangan prima)"
+              /><br />
+              <input
+                type="number"
+                id="qValue"
+                class="form-control"
+                placeholder="Nilai Q RSA (bilangan prima)"
+              /><br />
+              <a class="primary-btn my-3 text-light" id="generateKey"
+                >Generate RSA Key Pair</a
+              >
+              ><br />
+              <textarea
+                id="generatedPublicKey"
+                class="form-control"
+                placeholder="Kunci Publik"
+                readonly
+              ></textarea
+              ><br />
+              <textarea
+                id="generatedPrivateKey"
+                class="form-control"
+                placeholder="Kunci Privat"
+                readonly
+              ></textarea
+              ><br />
+              <a id="encrypt-link" class="primary-btn my-5 mr-5 text-light">
+                Enkripsi
+              </a>
+              <a id="decrypt-link" class="primary-btn my-5 text-light"
+                >Dekripsi</a
+              >
+              <br />
+              <textarea
+                id="result"
+                class="form-control"
+                placeholder="Hasil..."
+                readonly
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Super Encryption Section End -->
+
+    <!-- About Super Encryption Section Begin -->
+    <section class="team spad set-bg" data-setbg="img/team-bg.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title team__title">
+              <span>About</span>
+              <h2>SUPER ENKRIPSI</h2>
+              <p></p>
+              <p>
+                Super Enkripsi adalah teknik pengamanan data yang menggabungkan
+                beberapa metode enkripsi klasik dan modern untuk meningkatkan
+                keamanan. Metode yang digunakan antara lain Caesar Cipher, salah
+                satu teknik enkripsi tertua di mana setiap huruf dalam teks
+                digeser sejumlah posisi dalam alfabet; Vigenère Cipher, metode
+                enkripsi yang menggunakan kata kunci untuk menentukan seberapa
+                banyak pergeseran dilakukan pada setiap huruf dalam teks; XOR
+                Cipher, teknik yang memanfaatkan operasi logika XOR (exclusive
+                OR) untuk mengenkripsi atau mendekripsi teks menggunakan sebuah
+                kunci; dan RSA Encryption, algoritma enkripsi modern berbasis
+                kunci publik yang memungkinkan pengamanan data yang lebih kuat
+                dengan memanfaatkan dua bilangan prima besar untuk menghasilkan
+                pasangan kunci publik dan privat.
+              </p>
+              <p>
+                Dengan menggabungkan beberapa metode ini, Super Enkripsi
+                memberikan lapisan keamanan berjenjang, di mana pesan akan sulit
+                dipecahkan kecuali melalui setiap langkah deskripsi yang tepat.
+                Super Enkripsi digunakan untuk melindungi data sensitif dari
+                ancaman peretasan atau akses yang tidak diizinkan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Super Encryption Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const plaintext = document.getElementById("plaintext");
+        const result = document.getElementById("result");
+        const caesarShift = document.getElementById("caesarShift");
+        const vigenereKey = document.getElementById("vigenereKey");
+        const xorKey = document.getElementById("xorKey");
+
+        const pValueInput = document.getElementById("pValue");
+        const qValueInput = document.getElementById("qValue");
+        const generateKeyBtn = document.getElementById("generateKey");
+        const generatedPublicKey =
+          document.getElementById("generatedPublicKey");
+        const generatedPrivateKey = document.getElementById(
+          "generatedPrivateKey"
+        );
+
+        let publicKey = null;
+        let privateKey = null;
+
+        // Fungsi untuk memeriksa validitas input
+        function isValidInput(value, allowSpaces = false) {
+          const regex = allowSpaces ? /^[a-zA-Z0-9 ]*$/ : /^[a-zA-Z0-9]*$/;
+          return regex.test(value);
+        }
+
+        // Fungsi Caesar Cipher
+        function caesarCipherEncrypt(text, shift) {
+          return text
+            .split("")
+            .map((char) => {
+              const charCode = char.charCodeAt(0);
+              if (char >= "a" && char <= "z") {
+                return String.fromCharCode(((charCode - 97 + shift) % 26) + 97);
+              } else if (char >= "A" && char <= "Z") {
+                return String.fromCharCode(((charCode - 65 + shift) % 26) + 65);
+              } else {
+                return char;
+              }
+            })
+            .join("");
+        }
+
+        function caesarCipherDecrypt(text, shift) {
+          return caesarCipherEncrypt(text, 26 - shift);
+        }
+
+        // Fungsi Vigenere Cipher
+        function vigenereCipherEncrypt(text, key) {
+          let encrypted = "";
+          key = key.toLowerCase();
+          for (let i = 0, j = 0; i < text.length; i++) {
+            const currentChar = text[i];
+            if (currentChar.match(/[a-z]/i)) {
+              const shift = key[j % key.length].charCodeAt(0) - 97;
+              encrypted += caesarCipherEncrypt(currentChar, shift);
+              j++;
+            } else {
+              encrypted += currentChar;
+            }
+          }
+          return encrypted;
+        }
+
+        function vigenereCipherDecrypt(text, key) {
+          let decrypted = "";
+          key = key.toLowerCase();
+          for (let i = 0, j = 0; i < text.length; i++) {
+            const currentChar = text[i];
+            if (currentChar.match(/[a-z]/i)) {
+              const shift = key[j % key.length].charCodeAt(0) - 97;
+              decrypted += caesarCipherDecrypt(currentChar, shift);
+              j++;
+            } else {
+              decrypted += currentChar;
+            }
+          }
+          return decrypted;
+        }
+
+        // Fungsi XOR
+        function xorEncryptDecrypt(text, key) {
+          let output = "";
+          for (let i = 0; i < text.length; i++) {
+            output += String.fromCharCode(
+              text.charCodeAt(i) ^ key.charCodeAt(i % key.length)
+            );
+          }
+          return output;
+        }
+
+        // RSA Utility Functions
+        function gcd(a, b) {
+          while (b !== 0n) {
+            [a, b] = [b, a % b];
+          }
+          return a;
+        }
+
+        function extendedGcd(a, b) {
+          if (b === 0n) {
+            return [1n, 0n, a];
+          } else {
+            const [x1, y1, gcd] = extendedGcd(b, a % b);
+            return [y1, x1 - (a / b) * y1, gcd];
+          }
+        }
+
+        function modInverse(a, m) {
+          const [x, , g] = extendedGcd(a, m);
+          if (g !== 1n) {
+            throw new Error("Inverse doesn't exist");
+          }
+          return ((x % m) + m) % m;
+        }
+
+        function generateKeyPair(p, q) {
+          const n = p * q;
+          const phi = (p - 1n) * (q - 1n);
+          let e = 65537n; // Nilai umum untuk e
+          if (gcd(e, phi) !== 1n) {
+            e = 3n;
+            while (gcd(e, phi) !== 1n) {
+              e += 2n;
+            }
+          }
+          const d = modInverse(e, phi);
+          return { publicKey: { e, n }, privateKey: { d, n } };
+        }
+
+        // Generate RSA Key Pair
+        generateKeyBtn.addEventListener("click", () => {
+          const p = BigInt(pValueInput.value);
+          const q = BigInt(qValueInput.value);
+          if (
+            !isValidInput(pValueInput.value) ||
+            !isValidInput(qValueInput.value)
+          ) {
+            alert("P dan Q harus berupa angka!");
+            return;
+          }
+          const keys = generateKeyPair(p, q);
+          publicKey = keys.publicKey;
+          privateKey = keys.privateKey;
+
+          generatedPublicKey.value = `${publicKey.e}, ${publicKey.n}`;
+          generatedPrivateKey.value = `${privateKey.d}, ${privateKey.n}`;
+        });
+
+        // Encrypt
+        document
+          .getElementById("encrypt-link")
+          .addEventListener("click", () => {
+            const text = plaintext.value;
+
+            // Validasi Input
+            if (!isValidInput(text, true)) {
+              alert(
+                "Input tidak valid! Hanya karakter alfanumerik dan spasi yang diperbolehkan."
+              );
+              return;
+            }
+
+            if (!isValidInput(caesarShift.value) || isNaN(caesarShift.value)) {
+              alert("Kunci Caesar Shift harus berupa angka!");
+              return;
+            }
+
+            if (
+              !isValidInput(vigenereKey.value) ||
+              vigenereKey.value.trim() === ""
+            ) {
+              alert(
+                "Kunci Vigenere tidak boleh kosong dan tidak boleh mengandung karakter spesial!"
+              );
+              return;
+            }
+
+            if (!isValidInput(xorKey.value) || xorKey.value.trim() === "") {
+              alert(
+                "Kunci XOR tidak boleh kosong dan tidak boleh mengandung karakter spesial!"
+              );
+              return;
+            }
+
+            // Super Encryption
+            const caesarEncrypted = caesarCipherEncrypt(
+              text,
+              parseInt(caesarShift.value)
+            );
+            const vigenereEncrypted = vigenereCipherEncrypt(
+              caesarEncrypted,
+              vigenereKey.value
+            );
+            const xorEncrypted = xorEncryptDecrypt(
+              vigenereEncrypted,
+              xorKey.value
+            );
+
+            // RSA Encryption
+            if (publicKey) {
+              const encryptedData = [];
+              for (const char of xorEncrypted) {
+                const charCode = BigInt(char.charCodeAt(0));
+                const encryptedChar = (
+                  charCode ** publicKey.e %
+                  publicKey.n
+                ).toString();
+                encryptedData.push(encryptedChar);
+              }
+              result.value = encryptedData.join(", ");
+            } else {
+              result.value = "Generate RSA Key Pair first!";
+            }
+          });
+
+        // Decrypt
+        document
+          .getElementById("decrypt-link")
+          .addEventListener("click", () => {
+            const encryptedData = result.value.split(", ").map(BigInt);
+            let decryptedData = "";
+
+            // RSA Decryption
+            if (privateKey) {
+              for (const encryptedChar of encryptedData) {
+                const decryptedCharCode = (
+                  encryptedChar ** privateKey.d %
+                  privateKey.n
+                ).toString();
+                decryptedData += String.fromCharCode(decryptedCharCode);
+              }
+
+              // Reverse the super encryption steps
+              const xorDecrypted = xorEncryptDecrypt(
+                decryptedData,
+                xorKey.value
+              );
+              const vigenereDecrypted = vigenereCipherDecrypt(
+                xorDecrypted,
+                vigenereKey.value
+              );
+              const caesarDecrypted = caesarCipherDecrypt(
+                vigenereDecrypted,
+                parseInt(caesarShift.value)
+              );
+              result.value = caesarDecrypted;
+            } else {
+              result.value = "Generate RSA Key Pair first!";
+            }
+          });
+      });
+    </script>
+  </body>
+</html>

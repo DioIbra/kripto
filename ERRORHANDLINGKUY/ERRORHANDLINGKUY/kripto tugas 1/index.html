@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Videograph Template" />
+    <meta name="keywords" content="Videograph, unica, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kriptografi by Pemuda Hijrah</title>
+    <link rel="icon" href="img/logopemhi.png" type="image/x-icon" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+      /* Dropdown container */
+      .header__nav__menu ul.dropdown {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        list-style: none;
+        padding: 10px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px); /* Efek turun */
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        z-index: 99;
+      }
+
+      /* Dropdown items */
+      .header__nav__menu ul.dropdown li {
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Link inside the dropdown */
+      .header__nav__menu ul.dropdown li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+      }
+
+      /* Show dropdown when hover */
+      .header__nav__menu li:hover > ul.dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      /* Hover effect for dropdown items */
+      .header__nav__menu ul.dropdown li:hover {
+        background-color: #c5c5c5;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Menambahkan efek hover teks berubah menjadi hijau */
+      .header__nav__menu ul.dropdown li a:hover {
+        color: rgb(214, 3, 179); /* Teks berubah menjadi hijau saat hover */
+      }
+
+      /* Menambahkan transisi yang lebih halus ke item */
+      .header__nav__menu li {
+        position: relative; /* Dibutuhkan untuk posisi dropdown */
+      }
+
+      /* Untuk item navigasi tanpa dropdown */
+      .header__nav__menu li a {
+        padding: 10px 20px;
+        display: inline-block;
+        color: white;
+        transition: color 0.3s ease;
+      }
+
+      /* Warna teks berubah menjadi hijau saat hover pada menu utama */
+      .header__nav__menu li a:hover {
+        color: rgb(189, 2, 127); /* Teks berubah menjadi hijau saat hover */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="header__logo">
+              <a href="./index.html"><img src="img/pemhi.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-10">
+            <div class="header__nav__option">
+              <nav class="header__nav__menu mobile-menu">
+                <ul>
+                  <li class="active"><a href="./index.html">Home</a></li>
+                  <li>
+                    <a href="#">Classic</a>
+                    <ul class="dropdown">
+                      <li><a href="./caesarcipher.html">Caesar Cipher</a></li>
+                      <li>
+                        <a href="./vigenerecipher.html">Vigenère Cipher</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="#">Modern</a>
+                    <ul class="dropdown">
+                      <li><a href="./xor.html">XOR</a></li>
+                      <li><a href="./rsa.html">RSA</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="./superenkripsi.html">Super Enkripsi</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero">
+      <div class="hero__slider owl-carousel">
+        <div class="hero__item set-bg" data-setbg="img/hero/hero-3.jpg">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="hero__text">
+                  <span>Aplikasi Enkripsi dan Dekripsi</span>
+                  <h2>Kriptografi IF-E</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="hero__text">
+                  <span>Dibuat Oleh :</span>
+                  <h2>Pemuda Hijrah</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Services Section Begin -->
+    <section class="services spad">
+      <div class="container">
+        <div class="row">
+          <div class="section-title team__title">
+            <span>METHOD</span>
+            <h2>Encryption & Decryption</h2>
+          </div>
+          <!-- Services content column -->
+          <div class="col-lg-12">
+            <div class="row">
+              <!-- Service 1 -->
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="services__item">
+                  <h4>Caesar Cipher</h4>
+                  <a href="./caesarcipher.html" class="primary-btn">Jalankan</a>
+                </div>
+              </div>
+
+              <!-- Service 2 -->
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="services__item">
+                  <h4>Vigenère Cipher</h4>
+                  <a href="./vigenerecipher.html" class="primary-btn">Jalankan</a>
+                </div>
+              </div>
+
+              <!-- Service 3 -->
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="services__item">
+                  <h4>XOR</h4>
+                  <a href="./xor.html" class="primary-btn">Jalankan</a>
+                </div>
+              </div>
+
+              <!-- Service 4 -->
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="services__item">
+                  <h4>RSA</h4>
+                  <a href="./rsa.html" class="primary-btn">Jalankan</a>
+                </div>
+              </div>
+
+              <!-- Service 5: Offset to center it -->
+              <div class="col-lg-6 col-md-6 col-sm-6 offset-5">
+                <div class="services__item">
+                  <h4>Super Enkripsi</h4>
+                  <a href="./superenkripsi.html" class="primary-btn">Jalankan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Team Section Begin -->
+    <section class="team spad set-bg" data-setbg="img/team-bg.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title team__title">
+              <span>Nice to meet</span>
+              <h2>OUR Team</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+            <div class="team__item set-bg" data-setbg="img/team/team-1.jpg">
+              <div class="team__item__text">
+                <h4>M. Rafif Rezha</h4>
+                <p>123220041</p>
+                <div class="team__item__social">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+            <div
+              class="team__item team__item--second set-bg"
+              data-setbg="img/team/team-2.jpg"
+            >
+              <div class="team__item__text">
+                <h4>Tadeus Vito Gavra S.</h4>
+                <p>123220105</p>
+                <div class="team__item__social">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+            <div
+              class="team__item team__item--third set-bg"
+              data-setbg="img/team/team-3.jpg"
+            >
+              <div class="team__item__text">
+                <h4>Fikri Astama Putra</h4>
+                <p>123220108</p>
+                <div class="team__item__social">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+            <div
+              class="team__item team__item--four set-bg"
+              data-setbg="img/team/team-4.jpg"
+            >
+              <div class="team__item__text">
+                <h4>Abdullah Hisyam R</h4>
+                <p>123220120</p>
+                <div class="team__item__social">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-0">
+            <div class="team__btn">
+              <p>Sekian dan Terimakasih</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

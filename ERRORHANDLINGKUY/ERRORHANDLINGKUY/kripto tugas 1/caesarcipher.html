@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Videograph Template" />
+    <meta name="keywords" content="Videograph, unica, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kriptografi by Pemuda Hijrah</title>
+    <link rel="icon" href="img/logopemhi.png" type="image/x-icon" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+      /* Dropdown container */
+      .header__nav__menu ul.dropdown {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        list-style: none;
+        padding: 10px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px); /* Efek turun */
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        z-index: 99;
+      }
+
+      /* Dropdown items */
+      .header__nav__menu ul.dropdown li {
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Link inside the dropdown */
+      .header__nav__menu ul.dropdown li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+      }
+
+      /* Show dropdown when hover */
+      .header__nav__menu li:hover > ul.dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      /* Hover effect for dropdown items */
+      .header__nav__menu ul.dropdown li:hover {
+        background-color: #c5c5c5;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Menambahkan efek hover teks berubah menjadi hijau */
+      .header__nav__menu ul.dropdown li a:hover {
+        color: rgb(214, 3, 179); /* Teks berubah menjadi hijau saat hover */
+      }
+
+      /* Menambahkan transisi yang lebih halus ke item */
+      .header__nav__menu li {
+        position: relative; /* Dibutuhkan untuk posisi dropdown */
+      }
+
+      /* Untuk item navigasi tanpa dropdown */
+      .header__nav__menu li a {
+        padding: 10px 20px;
+        display: inline-block;
+        color: white;
+        transition: color 0.3s ease;
+      }
+
+      /* Warna teks berubah menjadi hijau saat hover pada menu utama */
+      .header__nav__menu li a:hover {
+        color: rgb(189, 2, 127); /* Teks berubah menjadi hijau saat hover */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="header__logo">
+              <a href="./index.html"><img src="img/pemhi.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-10">
+            <div class="header__nav__option">
+              <nav class="header__nav__menu mobile-menu">
+                <ul>
+                  <li><a href="./index.html">Home</a></li>
+                  <li class="active">
+                    <a href="#">Classic</a>
+                    <ul class="dropdown">
+                      <li><a href="./caesarcipher.html">Caesar Cipher</a></li>
+                      <li>
+                        <a href="./vigenerecipher.html">Vigenère Cipher</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="#">Modern</a>
+                    <ul class="dropdown">
+                      <li><a href="./xor.html">XOR</a></li>
+                      <li><a href="./rsa.html">RSA</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="./superenkripsi.html">Super Enkripsi</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <div
+      class="breadcrumb-option spad set-bg"
+      data-setbg="img/breadcrumb-bg.jpg"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="breadcrumb__text">
+              <h2>Caesar Cipher</h2>
+              <div class="breadcrumb__links">
+                <a href="#">Home</a>
+                <span>About</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Caesar Cipher Section Begin -->
+    <section class="about spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>Caesar Cipher Encryption & Decryption</h2>
+              <p>
+                Masukkan teks dan kunci pergeseran untuk mengenkripsi atau
+                mendekripsi.
+              </p>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="caesar__form">
+                  <form id="cipherForm">
+                    <div class="form-group">
+                      <label for="plaintext" class="text-light"
+                        >Masukkan Teks:</label
+                      >
+                      <textarea
+                        id="plaintext"
+                        class="form-control"
+                        rows="5"
+                        placeholder="Masukkan teks yang akan dienkripsi atau didekripsi"
+                      ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="shift" class="text-light"
+                        >Masukkan Kunci Pergeseran:</label
+                      >
+                      <input
+                        type="number"
+                        id="shift"
+                        class="form-control"
+                        placeholder="Masukkan angka"
+                      />
+                    </div>
+
+                    <!-- Mengganti <button> dengan <a> -->
+                    <a href="#" class="primary-btn mt-3 mr-5" id="encrypt-link"
+                      >Enkripsi</a
+                    >
+                    <a href="#" class="primary-btn mt-3" id="decrypt-link"
+                      >Dekripsi</a
+                    >
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="caesar__result">
+                  <h4 class="text-light">Hasil:</h4>
+                  <textarea
+                    id="result"
+                    class="form-control"
+                    rows="5"
+                    readonly
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Caesar Cipher Section End -->
+
+    <!-- About Caesar Cipher Section Begin -->
+    <section class="team spad set-bg" data-setbg="img/team-bg.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title team__title">
+              <span>About</span>
+              <h2>CAESAR CIPHER</h2>
+              <p></p>
+              <p>
+                Caesar Cipher adalah salah satu teknik enkripsi paling tua yang
+                digunakan sejak zaman Romawi Kuno, dinamai sesuai dengan Julius
+                Caesar yang dikatakan menggunakan metode ini untuk berkomunikasi
+                dengan pasukannya. Teknik ini termasuk dalam kategori cipher
+                substitusi, di mana setiap huruf dalam teks digeser sejumlah
+                posisi tetap dalam alfabet.
+              </p>
+              <p>
+                Cara kerja Caesar Cipher sangat sederhana: untuk mengenkripsi
+                pesan, setiap huruf dalam teks digeser beberapa posisi ke kanan
+                dalam alfabet. Misalnya, dengan pergeseran 3 posisi, huruf 'A'
+                menjadi 'D', 'B' menjadi 'E', dan seterusnya. Proses dekripsi
+                dilakukan dengan menggeser huruf-huruf dalam arah sebaliknya
+                (kiri).
+              </p>
+              <p>
+                Meskipun sederhana, Caesar Cipher memiliki kelemahan serius,
+                yaitu mudah dipecahkan dengan serangan brute-force. Karena hanya
+                ada 25 kemungkinan pergeseran (tidak termasuk 0), seseorang
+                dapat mencoba semua pergeseran hingga menemukan yang benar.
+                Namun, Caesar Cipher masih menjadi dasar pembelajaran penting
+                dalam kriptografi klasik.
+              </p>
+              <p>
+                Caesar Cipher sering dianggap sebagai fondasi dari berbagai
+                metode enkripsi modern yang lebih kompleks, dan tetap relevan
+                dalam konteks sejarah dan pengajaran dasar enkripsi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Caesar Cipher Section End -->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const plaintext = document.getElementById("plaintext");
+        const result = document.getElementById("result");
+        const shiftInput = document.getElementById("shift");
+
+        // Enkripsi menggunakan <a>
+        document
+          .getElementById("encrypt-link")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah link untuk reload halaman
+            const text = plaintext.value;
+            const shift = parseInt(shiftInput.value);
+
+            if (isNaN(shift)) {
+              alert("Kunci pergeseran harus berupa angka!");
+              return;
+            }
+
+            if (!/^[a-zA-Z\s]+$/.test(text)) {
+              // Allow letters and spaces
+              alert("Error: Masukkan hanya berupa huruf dan spasi!");
+            } else {
+              const encryptedText = caesarCipherEncrypt(text, shift);
+              result.value = encryptedText;
+            }
+          });
+
+        // Dekripsi menggunakan <a>
+        document
+          .getElementById("decrypt-link")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah link untuk reload halaman
+            const text = plaintext.value;
+            const shift = parseInt(shiftInput.value);
+
+            if (isNaN(shift)) {
+              alert("Kunci pergeseran harus berupa angka!");
+              return;
+            }
+
+            if (!/^[a-zA-Z\s]+$/.test(text)) {
+              // Allow letters and spaces
+              alert("Error: Masukkan hanya berupa huruf dan spasi!");
+            } else {
+              const decryptedText = caesarCipherDecrypt(text, shift);
+              result.value = decryptedText; // Show decrypted text
+            }
+          });
+
+        // Fungsi Caesar Cipher
+        function caesarCipherEncrypt(text, shift) {
+          return text
+            .split("")
+            .map((char) => {
+              const charCode = char.charCodeAt(0);
+              if (char >= "a" && char <= "z") {
+                return String.fromCharCode(((charCode - 97 + shift) % 26) + 97);
+              } else if (char >= "A" && char <= "Z") {
+                return String.fromCharCode(((charCode - 65 + shift) % 26) + 65);
+              } else {
+                return char; // Return spaces unchanged
+              }
+            })
+            .join("");
+        }
+
+        function caesarCipherDecrypt(text, shift) {
+          return caesarCipherEncrypt(text, 26 - shift);
+        }
+      });
+    </script>
+  </body>
+</html>

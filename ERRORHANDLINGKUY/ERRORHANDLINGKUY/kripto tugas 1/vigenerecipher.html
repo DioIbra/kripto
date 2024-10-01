@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Videograph Template" />
+    <meta name="keywords" content="Videograph, unica, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kriptografi by Pemuda Hijrah</title>
+    <link rel="icon" href="img/logopemhi.png" type="image/x-icon" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+      /* Dropdown container */
+      .header__nav__menu ul.dropdown {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        list-style: none;
+        padding: 10px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px); /* Efek turun */
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        z-index: 99;
+      }
+
+      /* Dropdown items */
+      .header__nav__menu ul.dropdown li {
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Link inside the dropdown */
+      .header__nav__menu ul.dropdown li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+      }
+
+      /* Show dropdown when hover */
+      .header__nav__menu li:hover > ul.dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      /* Hover effect for dropdown items */
+      .header__nav__menu ul.dropdown li:hover {
+        background-color: #c5c5c5;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Menambahkan efek hover teks berubah menjadi hijau */
+      .header__nav__menu ul.dropdown li a:hover {
+        color: rgb(214, 3, 179); /* Teks berubah menjadi hijau saat hover */
+      }
+
+      /* Menambahkan transisi yang lebih halus ke item */
+      .header__nav__menu li {
+        position: relative; /* Dibutuhkan untuk posisi dropdown */
+      }
+
+      /* Untuk item navigasi tanpa dropdown */
+      .header__nav__menu li a {
+        padding: 10px 20px;
+        display: inline-block;
+        color: white;
+        transition: color 0.3s ease;
+      }
+
+      /* Warna teks berubah menjadi hijau saat hover pada menu utama */
+      .header__nav__menu li a:hover {
+        color: rgb(189, 2, 127); /* Teks berubah menjadi hijau saat hover */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="header__logo">
+              <a href="./index.html"><img src="img/pemhi.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-10">
+            <div class="header__nav__option">
+              <nav class="header__nav__menu mobile-menu">
+                <ul>
+                  <li><a href="./index.html">Home</a></li>
+                  <li class="active">
+                    <a href="#">Classic</a>
+                    <ul class="dropdown">
+                      <li><a href="./caesarcipher.html">Caesar Cipher</a></li>
+                      <li>
+                        <a href="./vigenerecipher.html">Vigenère Cipher</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="#">Modern</a>
+                    <ul class="dropdown">
+                      <li><a href="./xor.html">XOR</a></li>
+                      <li><a href="./rsa.html">RSA</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="./superenkripsi.html">Super Enkripsi</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <div
+      class="breadcrumb-option spad set-bg"
+      data-setbg="img/breadcrumb-bg.jpg"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="breadcrumb__text">
+              <h2>Vigenère Cipher</h2>
+              <div class="breadcrumb__links">
+                <a href="#">Home</a>
+                <span>About</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Vigenère Cipher Section Begin -->
+    <section class="about spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>Vigenère Cipher Encryption & Decryption</h2>
+              <p>
+                Masukkan teks dan kunci pergeseran untuk mengenkripsi atau
+                mendekripsi.
+              </p>
+            </div>
+
+            <div class="vigenere__form">
+              <form id="cipherForm">
+                <div class="form-group">
+                  <label for="plaintext" class="text-light"
+                    >Masukkan Teks:</label
+                  >
+                  <textarea
+                    id="plaintext"
+                    class="form-control"
+                    rows="5"
+                    placeholder="Masukkan teks yang akan dienkripsi atau didekripsi"
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="key" class="text-light">Masukkan Kunci:</label>
+                  <input
+                    type="text"
+                    id="key"
+                    class="form-control"
+                    placeholder="Masukkan kata kunci"
+                  />
+                </div>
+
+                <!-- Mengganti <button> dengan <a> -->
+                <a href="#" class="primary-btn my-5 mr-5" id="encrypt-link"
+                  >Enkripsi</a
+                >
+                <a href="#" class="primary-btn my-5" id="decrypt-link"
+                  >Dekripsi</a
+                >
+              </form>
+            </div>
+
+            <div class="vigenere__result">
+              <h4 class="text-light">Hasil:</h4>
+              <textarea
+                id="result"
+                class="form-control"
+                rows="5"
+                readonly
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Vigenère Cipher Section End -->
+
+    <!-- About Vigenère Cipher Section Begin -->
+    <section class="team spad set-bg" data-setbg="img/team-bg.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title team__title">
+              <span>About</span>
+              <h2>VIGENÈRE CIPHER</h2>
+              <p></p>
+              <p>
+                Vigenère Cipher adalah metode enkripsi yang lebih kompleks
+                dibandingkan Caesar Cipher, pertama kali diperkenalkan oleh
+                diplomat Prancis Blaise de Vigenère pada abad ke-16. Cipher ini
+                termasuk dalam kategori cipher substitusi polialfabetik, yang
+                artinya menggunakan lebih dari satu alfabet untuk mengenkripsi
+                pesan.
+              </p>
+              <p>
+                Dalam Vigenère Cipher, proses enkripsi dilakukan dengan
+                menggunakan sebuah kata kunci (key). Setiap huruf dalam teks
+                asli (plaintext) digeser sejumlah posisi sesuai dengan huruf
+                dalam kata kunci. Misalnya, jika kata kunci adalah "LEMON", maka
+                huruf pertama plaintext akan digeser sesuai posisi 'L' (posisi
+                ke-12 dalam alfabet), huruf kedua dengan 'E' (posisi ke-5), dan
+                seterusnya. Kata kunci ini berulang sepanjang teks, memberikan
+                variasi yang lebih kompleks dalam pergeseran.
+              </p>
+              <p>
+                Salah satu keunggulan Vigenère Cipher dibandingkan Caesar Cipher
+                adalah resistensinya terhadap serangan brute-force, karena lebih
+                sulit menebak kunci yang bervariasi. Namun, cipher ini tetap
+                memiliki kelemahan jika kata kunci terlalu pendek atau jika
+                metode frekuensi huruf digunakan untuk memecahkannya.
+              </p>
+              <p>
+                Meskipun Vigenère Cipher sempat dianggap "tidak bisa dipecahkan"
+                selama berabad-abad, akhirnya teknik kriptoanalisis yang lebih
+                maju, seperti analisis frekuensi, berhasil memecahkannya. Namun,
+                cipher ini tetap menjadi langkah penting dalam sejarah
+                kriptografi dan sering digunakan dalam pendidikan kriptografi
+                untuk memperkenalkan konsep enkripsi polialfabetik.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Vigenère Cipher Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const plaintext = document.getElementById("plaintext");
+        const key = document.getElementById("key");
+        const result = document.getElementById("result");
+
+        // Enkripsi menggunakan <a>
+        document
+          .getElementById("encrypt-link")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah link untuk reload halaman
+            const text = plaintext.value;
+            const encryptionKey = key.value;
+
+            // Update regex to allow letters and spaces in plaintext
+            if (!/^[a-zA-Z\s]+$/.test(text)) {
+              alert("Error: Masukkan hanya berupa huruf dan spasi!");
+              return;
+            }
+
+            // Ensure the key contains only letters
+            if (!/^[a-zA-Z]+$/.test(encryptionKey)) {
+              alert("Error: Kunci hanya boleh terdiri dari huruf!");
+              return;
+            }
+
+            const encryptedText = vigenereCipherEncrypt(text, encryptionKey);
+            result.value = encryptedText; // Set the encrypted text
+          });
+
+        // Dekripsi menggunakan <a>
+        document
+          .getElementById("decrypt-link")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah link untuk reload halaman
+            const text = plaintext.value;
+            const decryptionKey = key.value;
+
+            // Update regex to allow letters and spaces in plaintext
+            if (!/^[a-zA-Z\s]+$/.test(text)) {
+              alert("Error: Masukkan hanya berupa huruf dan spasi!");
+              return;
+            }
+
+            // Ensure the key contains only letters
+            if (!/^[a-zA-Z]+$/.test(decryptionKey)) {
+              alert("Error: Kunci hanya boleh terdiri dari huruf!");
+              return;
+            }
+
+            const decryptedText = vigenereCipherDecrypt(text, decryptionKey);
+            result.value = decryptedText; // Set the decrypted text
+          });
+
+        // Fungsi Vigenère Cipher Enkripsi
+        function vigenereCipherEncrypt(text, key) {
+          let encrypted = "";
+          key = key.toLowerCase();
+          for (let i = 0, j = 0; i < text.length; i++) {
+            const currentChar = text[i];
+            if (currentChar.match(/[a-zA-Z]/)) {
+              // Match letters only
+              const shift = key[j % key.length].charCodeAt(0) - 97; // Calculate shift based on key
+              encrypted += caesarCipherEncrypt(currentChar, shift);
+              j++;
+            } else {
+              encrypted += currentChar; // Append spaces unchanged
+            }
+          }
+          return encrypted;
+        }
+
+        // Fungsi Vigenère Cipher Dekripsi
+        function vigenereCipherDecrypt(text, key) {
+          let decrypted = "";
+          key = key.toLowerCase();
+          for (let i = 0, j = 0; i < text.length; i++) {
+            const currentChar = text[i];
+            if (currentChar.match(/[a-zA-Z]/)) {
+              // Match letters only
+              const shift = key[j % key.length].charCodeAt(0) - 97; // Calculate shift based on key
+              decrypted += caesarCipherDecrypt(currentChar, shift);
+              j++;
+            } else {
+              decrypted += currentChar; // Append spaces unchanged
+            }
+          }
+          return decrypted;
+        }
+
+        // Fungsi Caesar Cipher Enkripsi
+        function caesarCipherEncrypt(text, shift) {
+          return text
+            .split("")
+            .map((char) => {
+              const charCode = char.charCodeAt(0);
+              if (char >= "a" && char <= "z") {
+                return String.fromCharCode(((charCode - 97 + shift) % 26) + 97);
+              } else if (char >= "A" && char <= "Z") {
+                return String.fromCharCode(((charCode - 65 + shift) % 26) + 65);
+              } else {
+                return char; // Return spaces unchanged
+              }
+            })
+            .join("");
+        }
+
+        // Fungsi Caesar Cipher Dekripsi
+        function caesarCipherDecrypt(text, shift) {
+          return caesarCipherEncrypt(text, 26 - shift);
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Videograph Template" />
+    <meta name="keywords" content="Videograph, unica, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kriptografi by Pemuda Hijrah</title>
+    <link rel="icon" href="img/logopemhi.png" type="image/x-icon" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+      /* Dropdown container */
+      .header__nav__menu ul.dropdown {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        list-style: none;
+        padding: 10px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px); /* Efek turun */
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        z-index: 99;
+      }
+
+      /* Dropdown items */
+      .header__nav__menu ul.dropdown li {
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Link inside the dropdown */
+      .header__nav__menu ul.dropdown li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+      }
+
+      /* Show dropdown when hover */
+      .header__nav__menu li:hover > ul.dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      /* Hover effect for dropdown items */
+      .header__nav__menu ul.dropdown li:hover {
+        background-color: #c5c5c5;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Menambahkan efek hover teks berubah menjadi hijau */
+      .header__nav__menu ul.dropdown li a:hover {
+        color: rgb(214, 3, 179); /* Teks berubah menjadi hijau saat hover */
+      }
+
+      /* Menambahkan transisi yang lebih halus ke item */
+      .header__nav__menu li {
+        position: relative; /* Dibutuhkan untuk posisi dropdown */
+      }
+
+      /* Untuk item navigasi tanpa dropdown */
+      .header__nav__menu li a {
+        padding: 10px 20px;
+        display: inline-block;
+        color: white;
+        transition: color 0.3s ease;
+      }
+
+      /* Warna teks berubah menjadi hijau saat hover pada menu utama */
+      .header__nav__menu li a:hover {
+        color: rgb(189, 2, 127); /* Teks berubah menjadi hijau saat hover */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="header__logo">
+              <a href="./index.html"><img src="img/pemhi.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-10">
+            <div class="header__nav__option">
+              <nav class="header__nav__menu mobile-menu">
+                <ul>
+                  <li><a href="./index.html">Home</a></li>
+                  <li>
+                    <a href="#">Classic</a>
+                    <ul class="dropdown">
+                      <li><a href="./caesarcipher.html">Caesar Cipher</a></li>
+                      <li>
+                        <a href="./vigenerecipher.html">Vigenère Cipher</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="active">
+                    <a href="#">Modern</a>
+                    <ul class="dropdown">
+                      <li><a href="./xor.html">XOR</a></li>
+                      <li><a href="./rsa.html">RSA</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="./superenkripsi.html">Super Enkripsi</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <div
+      class="breadcrumb-option spad set-bg"
+      data-setbg="img/breadcrumb-bg.jpg"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="breadcrumb__text">
+              <h2>RSA</h2>
+              <div class="breadcrumb__links">
+                <a href="#">Home</a>
+                <span>About</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- RSA Encryption & Decryption Section Begin -->
+    <section class="about spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>RSA Encryption & Decryption</h2>
+              <p>
+                Masukkan teks dan gunakan kunci yang dihasilkan untuk enkripsi
+                atau dekripsi menggunakan RSA.
+              </p>
+            </div>
+
+            <!-- RSA Key Generation Section -->
+            <div class="rsa__keygen">
+              <h3 class="text-light">RSA Key Generation</h3>
+
+              <div class="form-group">
+                <label for="pValue" class="text-light"
+                  >Masukkan Nilai P (bilangan prima):</label
+                >
+                <input
+                  type="text"
+                  id="pValue"
+                  class="form-control"
+                  placeholder="Contoh: 61"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="qValue" class="text-light"
+                  >Masukkan Nilai Q (bilangan prima):</label
+                >
+                <input
+                  type="text"
+                  id="qValue"
+                  class="form-control"
+                  placeholder="Contoh: 53"
+                />
+              </div>
+
+              <a class="primary-btn my-3 text-light" id="generateKey"
+                >Generate RSA Key Pair</a
+              >
+
+              <div class="form-group">
+                <label for="generatedPublicKey" class="text-light"
+                  >Public Key (n, e):</label
+                >
+                <textarea
+                  id="generatedPublicKey"
+                  class="form-control"
+                  rows="3"
+                  readonly
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="generatedPrivateKey" class="text-light"
+                  >Private Key (n, d):</label
+                >
+                <textarea
+                  id="generatedPrivateKey"
+                  class="form-control"
+                  rows="3"
+                  readonly
+                ></textarea>
+              </div>
+            </div>
+            <!-- End of RSA Key Generation Section -->
+
+            <div class="rsa__form mt-5">
+              <form id="cipherForm">
+                <div class="form-group">
+                  <label for="plaintext" class="text-light"
+                    >Masukkan Teks:</label
+                  >
+                  <textarea
+                    id="plaintext"
+                    class="form-control"
+                    rows="5"
+                    placeholder="Masukkan teks yang akan dienkripsi atau didekripsi"
+                  ></textarea>
+                </div>
+
+                <a href="#" class="primary-btn my-5 mr-5" id="encrypt-link"
+                  >Enkripsi</a
+                >
+                <a href="#" class="primary-btn my-5" id="decrypt-link"
+                  >Dekripsi</a
+                >
+              </form>
+            </div>
+
+            <div class="rsa__result mt-5">
+              <h4 class="text-light">Hasil:</h4>
+              <textarea
+                id="result"
+                class="form-control"
+                rows="5"
+                readonly
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- RSA Section End -->
+
+    <!-- About RSA Encryption Section Begin -->
+<section class="team spad set-bg" data-setbg="img/team-bg.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title team__title">
+          <span>About</span>
+            <h2>RSA ENCRYPTION & DECRYPTION</h2>
+            <p></p>
+          <p>
+            RSA (Rivest-Shamir-Adleman) adalah algoritma enkripsi berbasis kunci publik yang pertama kali diperkenalkan pada tahun 1977. RSA merupakan salah satu metode enkripsi paling aman dan banyak digunakan dalam pengamanan komunikasi digital saat ini. Berbeda dengan metode enkripsi simetris seperti XOR atau Caesar, RSA menggunakan dua kunci yang berbeda: kunci publik untuk enkripsi dan kunci privat untuk dekripsi.
+          </p>
+          <p>
+            RSA Encryption dimulai dengan memilih dua bilangan prima besar, sebut saja <strong>p</strong> dan <strong>q</strong>. Dari bilangan prima ini, dihitung nilai modulus <strong>n = p × q</strong> yang menjadi bagian dari kunci publik dan privat. Kemudian, dihitung nilai fungsi Euler, yaitu <strong>φ(n) = (p-1)(q-1)</strong>. 
+          </p>
+          <p>
+            Selanjutnya, kita memilih bilangan bulat <strong>e</strong> yang relatif prima terhadap <strong>φ(n)</strong> (biasanya e = 65537), yang akan menjadi eksponen publik untuk enkripsi. Akhirnya, kita menghitung eksponen privat <strong>d</strong> yang merupakan kebalikan modular dari <strong>e</strong> terhadap <strong>φ(n)</strong>, menggunakan rumus:
+          </p>
+          <pre>e × d ≡ 1 (mod φ(n))</pre>
+          <p>
+            Dengan kunci publik <strong>(e, n)</strong> dan kunci privat <strong>(d, n)</strong>, proses enkripsi dilakukan sebagai berikut:
+          </p>
+          <pre>C = M^e mod n</pre>
+          <p>Di mana <strong>M</strong> adalah pesan (plaintext) yang akan dienkripsi, dan <strong>C</strong> adalah ciphertext yang dihasilkan.</p>
+          <p>
+            Untuk mendekripsi pesan, digunakan kunci privat dengan rumus berikut:
+          </p>
+          <pre>M = C^d mod n</pre>
+          <p>Dengan begitu, pesan asli <strong>M</strong> dapat dipulihkan dari ciphertext <strong>C</strong>.</p>
+          <p>
+            RSA Encryption sangat aman karena memecahkan enkripsi RSA memerlukan faktorisasi bilangan besar <strong>n</strong>, yang terdiri dari dua bilangan prima besar. Faktorisasi ini sangat sulit dan membutuhkan waktu komputasi yang sangat lama jika bilangan prima yang digunakan cukup besar (misalnya 2048-bit atau lebih).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About RSA Encryption Section End -->
+
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Element References
+        const pValueInput = document.getElementById("pValue");
+        const qValueInput = document.getElementById("qValue");
+        const plaintext = document.getElementById("plaintext");
+        const result = document.getElementById("result");
+        const generateKeyBtn = document.getElementById("generateKey");
+        const generatedPublicKey =
+          document.getElementById("generatedPublicKey");
+        const generatedPrivateKey = document.getElementById(
+          "generatedPrivateKey"
+        );
+        const encryptLink = document.getElementById("encrypt-link");
+        const decryptLink = document.getElementById("decrypt-link");
+
+        let publicKey = null;
+        let privateKey = null;
+
+        // Fungsi untuk menghitung GCD menggunakan Algoritma Euclidean
+        function gcd(a, b) {
+          while (b !== 0n) {
+            [a, b] = [b, a % b];
+          }
+          return a;
+        }
+
+        // Algoritma Euclidean yang Diperluas untuk mencari invers modular
+        function extendedGcd(a, b) {
+          if (b === 0n) {
+            return [1n, 0n, a];
+          } else {
+            const [x1, y1, d] = extendedGcd(b, a % b);
+            return [y1, x1 - (a / b) * y1, d];
+          }
+        }
+
+        // Fungsi untuk mencari invers modular
+        function modInverse(e, phi) {
+          const [x, y, d] = extendedGcd(e, phi);
+          if (d !== 1n) {
+            throw new Error("Invers modular tidak ada.");
+          }
+          return ((x % phi) + phi) % phi;
+        }
+
+        // Fungsi untuk melakukan eksponensiasi modular
+        function modPow(base, exp, mod) {
+          let result = 1n;
+          base = base % mod;
+          while (exp > 0n) {
+            if (exp % 2n === 1n) {
+              result = (result * base) % mod;
+            }
+            exp = exp / 2n;
+            base = (base * base) % mod;
+          }
+          return result;
+        }
+
+        // Fungsi untuk menghitung kunci publik dan privat dari p dan q
+        function generateRSAKeyPair(p, q) {
+          const n = p * q;
+          const phi = (p - 1n) * (q - 1n);
+          let e = 65537n; // Nilai umum untuk e
+          if (gcd(e, phi) !== 1n) {
+            e = 3n;
+            while (gcd(e, phi) !== 1n) {
+              e += 2n;
+            }
+          }
+          const d = modInverse(e, phi);
+          return { publicKey: { e, n }, privateKey: { d, n } };
+        }
+
+        // Event Listener untuk Generate RSA Key Pair
+        generateKeyBtn.addEventListener("click", function () {
+          const p = BigInt(pValueInput.value.trim());
+          const q = BigInt(qValueInput.value.trim());
+          alert("Menghasilkan RSA Key Pair...");
+          try {
+            const { publicKey: pubKey, privateKey: privKey } =
+              generateRSAKeyPair(p, q);
+            generatedPublicKey.value = `(${pubKey.n}, ${pubKey.e})`;
+            generatedPrivateKey.value = `(${privKey.n}, ${privKey.d})`;
+
+            // Simpan kunci publik dan privat untuk digunakan saat enkripsi dan dekripsi
+            publicKey = pubKey;
+            privateKey = privKey;
+
+            alert("RSA Key Pair berhasil di-generate!");
+          } catch (error) {
+            alert("Terjadi kesalahan saat menghasilkan kunci RSA.");
+            console.error(error);
+          }
+        });
+
+        // Fungsi Enkripsi RSA
+        function rsaEncrypt(plaintext, e, n) {
+          let ciphertext = "";
+          for (let i = 0; i < plaintext.length; i++) {
+            const message = BigInt(plaintext.charCodeAt(i));
+            const encryptedChar = modPow(message, e, n);
+            ciphertext += encryptedChar.toString() + ",";
+          }
+          return ciphertext.slice(0, -1);
+        }
+
+        // Fungsi Dekripsi RSA
+        function rsaDecrypt(ciphertext, d, n) {
+          const encryptedChars = ciphertext.split(",");
+          let decryptedText = "";
+          for (let i = 0; i < encryptedChars.length; i++) {
+            const decryptedChar = modPow(BigInt(encryptedChars[i]), d, n);
+            decryptedText += String.fromCharCode(Number(decryptedChar));
+          }
+          return decryptedText;
+        }
+
+        // Event Listener untuk Enkripsi
+        encryptLink.addEventListener("click", function (event) {
+          event.preventDefault();
+          const plaintextValue = plaintext.value.trim();
+          if (plaintextValue && publicKey) {
+            const encryptedText = rsaEncrypt(
+              plaintextValue,
+              publicKey.e,
+              publicKey.n
+            );
+            result.value = encryptedText;
+          } else {
+            alert("Masukkan teks dan pastikan kunci publik sudah di-generate!");
+          }
+        });
+
+        // Event Listener untuk Dekripsi
+        decryptLink.addEventListener("click", function (event) {
+          event.preventDefault();
+          const ciphertextValue = result.value.trim();
+          if (ciphertextValue && privateKey) {
+            const decryptedText = rsaDecrypt(
+              ciphertextValue,
+              privateKey.d,
+              privateKey.n
+            );
+            result.value = decryptedText;
+          } else {
+            alert(
+              "Pastikan teks terenkripsi dan kunci privat sudah di-generate!"
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
